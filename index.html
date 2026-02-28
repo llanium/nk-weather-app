@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조선 기상 통보</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 起動画面 -->
+  <div id="splash" class="screen active">
+    <div class="emblem">★</div>
+    <h1>
+      위대한 조국의 은덕으로<br>
+      오늘도 영광스러운 하늘
+    </h1>
+    <button id="startBtn">시작</button>
+  </div>
+
+  <!-- メイン画面 -->
+  <div id="main" class="screen">
+    <header>
+      <h2>전국 기상 통보</h2>
+    </header>
+
+    <section class="map-area">
+      <!-- 内蔵SVG地図（簡略化した北朝鮮風シルエット） -->
+      <svg id="nkMap" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 10 L120 20 L160 80 L140 140 L170 220 L90 290 L40 250 L60 200 L30 150 L50 80 Z"
+              fill="#001f5b" stroke="#ffffff" stroke-width="3"/>
+      </svg>
+      <p class="tap-hint">지도를 눌러 확대</p>
+    </section>
+
+    <section class="city-list" id="cityList"></section>
+  </div>
+
+  <!-- 拡大地図モーダル -->
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">×</span>
+      <h3>지역별 상세 기상</h3>
+      <p id="regionInfo">지역을 선택하십시오</p>
+
+      <svg class="modal-map" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 10 L120 20 L

@@ -1,0 +1,15 @@
+{
+  "name": "조선 기상 통보",
+  "short_name": "기상통보",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#001f5b",
+  "theme_color": "#b40000",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
