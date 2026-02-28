@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>조선민주주의인민공화국 기상통보</title>
+  <meta name="description" content="조선민주주의인민공화국 전 지역 기상통보 공식 웹앱" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b40000">
+
+  <!-- iOS icon -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash" class="screen active">
+    <div class="emblem">★</div>
+    <h1>
+      위대한 조국의 은덕으로<br>
+      오늘도 영광스러운 하늘
+    </h1>
+    <button id="startBtn">시작</button>
+  </div>
+
+  <!-- Main Screen -->
+  <div id="main" class="screen">
+    <header>
+      <h2>전국 기상 통보</h2>
+    </header>
+
+    <section class="map-area">
+      <!-- 地図画像ファイル名が nk-map.png になっている前提 -->
+      <img id="nkMap" src="nk-map.png" alt="조선민주주의인민공화국 지도">
+      <p class="tap-hint">위대한 조국의 하늘을 눌러보십시오</p>
+    </section>
+
+    <section id="cityList" class="city-list">
+      <!-- JSで都市天気がここに入る -->
+    </section>
+  </div>
+
+  <!-- Map Modal -->
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal">닫기</button>
+      <img src="nk-map.png" alt="확대 지도">
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
